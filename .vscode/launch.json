@@ -1,0 +1,102 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "vmArgs": "--add-modules jdk.incubator.vector --enable-preview"
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "java21.RecordPattern.App",
+            "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "java21.SequencedCollection.App",
+            "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "switchPattern",
+            "request": "launch",
+            "mainClass": "java21.switchPattern.SwitchPattern",
+            "projectName": "study-group-java21_aa5aaa6f",
+            "vmArgs": [
+                "--enable-preview",
+            ]
+        },
+        {
+            "type": "java",
+            "name": "App(2)",
+            "request": "launch",
+            "mainClass": "java21.StringTemplate.App",
+            "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "JFRExample",
+            "request": "launch",
+            "mainClass": "java21.jrfviewer.JFRExample",
+            "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "App(3)",
+            "request": "launch",
+            "mainClass": "java21.kem.App",
+            "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "App(4)",
+            "request": "launch",
+            "mainClass": "java21.vector.App",
+            "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "App(5)",
+            "request": "launch",
+            "mainClass": "java21.virtualThread.App",
+            "projectName": "study-group-java21_aa5aaa6f"
+        }
+    ]
+}

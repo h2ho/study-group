@@ -31,6 +31,8 @@ https://openjdk.org/jeps/439
 a more declarative, data-focused style of programming
 
 ### Pattern Matching for switch
+
+
 ### Foreign Function & Memory API (Third Preview)
 
 Introduce an API by which Java programs can interoperate with code and data outside of the Java runtime.
@@ -59,11 +61,65 @@ Do not pool virtual threads
 
 
 ### Unnamed Classes and Instance Main Methods (Preview)
+
+Unnamed classes are a significant feature designed to simplify the learning curve for beginners. It allows methods, fields, and classes to exist without explicit class declarations.
+
+
+#### Rules to Create and Use an Unnamed Class
+1. The ‘package’ Statement is Not Allowed
+
+2. No Constructor is Allowed
+Since we cannot refer to the unnamed class by its name, we cannot create a constructor as well.
+
+It also means that we cannot create an instance of an unnamed class. That is why these classes are suited only for simple POC and learning purposes.
+
+3. A main() Method must Exist
+Since we cannot create a direct instance of an unnamed class, to make it usable, it must have a main() method to execute its code. Java compiler will throw an error if there is no main method.
+
+4. Unnamed class cannot extend or implement
+An unnamed class is always final and it cannot extend another class (except Object) or implement an interface.
+
+5. Access to Static Members
+
 ### Scoped Values (Preview)
 ### Vector API (Sixth Incubator)
+
+A vector computation is a sequence of operations that work on multiple data elements at the same time, such as complex math and array operations.
+The Vector API has two main parts: the vector classes and the vector operations. the Vector API has a hardware dependency as it relies on SIMD instructions
+
+```java
+int[] a = {1, 2, 3, 4};
+int[] b = {5, 6, 7, 8};
+int[] c = new int[4];
+
+// Vector computation
+for (int i = 0; i < c.length; i++) {
+  c[i] = a[i] + b[i];
+} 
+
+// vs
+c[0] = a[0] + b[0];
+```
+
+
 ### Deprecate the Windows 32-bit x86 Port for Removal
+
+Deprecate the Windows 32-bit x86 port, with the intent to remove it in a future release.
+Windows 10, the last Windows operating system to support 32-bit operation, will reach End of Life in October 2025.
+
+
 ### Prepare to Disallow the Dynamic Loading of Agents
+
+Issue warnings when agents are loaded dynamically into a running JVM.   
+
+
+An agent is a component that can alter the code of an application while the application is running.
+
+
 ### Key Encapsulation Mechanism API
+
+Introduce an API for key encapsulation mechanisms (KEMs), an encryption technique for securing symmetric keys using public key cryptography.
+
 ### Structured Concurrency (Preview)
 
 Structured concurrency treats groups of related tasks running in different threads as a single unit of work, thereby streamlining error handling and cancellation, improving reliability, and enhancing observability.
@@ -146,3 +202,4 @@ The general workflow of code using StructuredTaskScope is:
 - https://www.baeldung.com/java-20-new-features
 - https://www.baeldung.com/java-21-string-templates
 - https://www.happycoders.eu/java/virtual-threads/
+- https://howtodoinjava.com/java/java-unnamed-class-instance-method/
