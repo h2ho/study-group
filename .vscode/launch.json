@@ -97,6 +97,13 @@
             "request": "launch",
             "mainClass": "java21.virtualThread.App",
             "projectName": "study-group-java21_aa5aaa6f"
+        },
+        {
+            "type": "java",
+            "name": "ScopedValue",
+            "request": "launch",
+            "mainClass": "java21.ScopedValue.App",
+            "projectName": "study-group-java21_aa5aaa6f"
         }
     ]
 }
