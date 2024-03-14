@@ -41,6 +41,8 @@ a more declarative, data-focused style of programming
 
 ### Pattern Matching for switch
 
+Enhance the Java programming language with pattern matching for switch expressions and statements. Extending pattern matching to switch allows an expression to be tested against a number of patterns, each with a specific action, so that complex data-oriented queries can be expressed concisely and safely.
+
 
 ### Foreign Function & Memory API (Third Preview)
 
@@ -51,6 +53,7 @@ Goal: Ease of use, Performance, Generality, Safety
 
 ### Unnamed Patterns and Variables (Preview)
 
+Enhance the Java language with unnamed patterns, which match a record component without stating the component's name or type, and unnamed variables, which can be initialized but not used. Both are denoted by an underscore character, _.
 
 
 ### Virtual Threads
@@ -223,15 +226,15 @@ The general workflow of code using StructuredTaskScope is:
 - Pattern Matching Improvements
 - Deprecated Finalization for Removal
 protected void finalize()  
-Unfortunately, finalization has several critical, fundamental flaws:
+Unfortunately, finalization has several critical, fundamental flaws:  
 
-- Unpredictable latency — An arbitrarily long time may pass between the moment an object becomes unreachable and the moment its finalizer is called. In fact, the GC provides no guarantee that any finalizer will ever be called.
+  - Unpredictable latency — An arbitrarily long time may pass between the moment an object becomes unreachable and the moment its finalizer is called. In fact, the GC provides no guarantee that any finalizer will ever be called.
 
-- Unconstrained behavior — Finalizer code can take any action. In particular, it can save a reference to the object being finalized, thereby resurrecting the object and making it reachable once again.
+  - Unconstrained behavior — Finalizer code can take any action. In particular, it can save a reference to the object being finalized, thereby resurrecting the object and making it reachable once again.
 
-- Always enabled — Finalization has no explicit registration mechanism. A class with a finalizer enables finalization for every instance of the class, whether needed or not. Finalization of an object cannot be cancelled, even if it is no longer necessary for that object.
+  - Always enabled — Finalization has no explicit registration mechanism. A class with a finalizer enables finalization for every instance of the class, whether needed or not. Finalization of an object cannot be cancelled, even if it is no longer necessary for that object.
 
-- Unspecified threading — Finalizers run on unspecified threads, in an arbitrary order. Neither threading nor ordering can be controlled.
+  - Unspecified threading — Finalizers run on unspecified threads, in an arbitrary order. Neither threading nor ordering can be controlled.
 
 
 ---
