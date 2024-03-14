@@ -48,7 +48,7 @@
         },
         {
             "type": "java",
-            "name": "App(1)",
+            "name": "SequencedCollection",
             "request": "launch",
             "mainClass": "java21.SequencedCollection.App",
             "projectName": "study-group-java21_aa5aaa6f"
@@ -68,13 +68,6 @@
             "name": "App(2)",
             "request": "launch",
             "mainClass": "java21.StringTemplate.App",
-            "projectName": "study-group-java21_aa5aaa6f"
-        },
-        {
-            "type": "java",
-            "name": "JFRExample",
-            "request": "launch",
-            "mainClass": "java21.jrfviewer.JFRExample",
             "projectName": "study-group-java21_aa5aaa6f"
         },
         {
